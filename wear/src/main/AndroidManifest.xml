@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.boost.watchcore" >
+
+    <uses-feature android:name="android.hardware.type.watch" />
+
+    <!-- Required to act as a custom watch face. -->
+    <uses-permission android:name="com.google.android.permission.PROVIDE_BACKGROUND" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <!-- Calendar permission used by CalendarWatchFaceService -->
+    <uses-permission android:name="android.permission.READ_CALENDAR" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+
+        android:label="@string/app_name">
+        <activity
+            android:name=".ui.faces.material.config.MaterialWatchFaceConfigActivity"
+            android:label="@string/analog_material_config_name">
+            <intent-filter>
+                <action android:name="com.boost.watchcore.material.CONFIG_ANALOG" />
+
+                <category android:name="com.google.android.wearable.watchface.category.WEARABLE_CONFIGURATION" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ui.faces.heartbeat.config.HeartbeatConfigActivity"
+            android:label="@string/temp_real_heart">
+            <intent-filter>
+                <action android:name="com.boost.watchcore.heartbeat.CONFIG_ANALOG" />
+
+                <category android:name="com.google.android.wearable.watchface.category.WEARABLE_CONFIGURATION" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ui.faces.simple.config.SimpleConfigActivity"
+            android:label="@string/simple_name">
+            <intent-filter>
+                <action android:name="com.boost.watchcore.simple.CONFIG_ANALOG" />
+
+                <category android:name="com.google.android.wearable.watchface.category.WEARABLE_CONFIGURATION" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ui.faces.pizza.config.PizzaConfigActivity"
+            android:label="@string/analog_material_config_name">
+            <intent-filter>
+                <action android:name="com.boost.watchcore.pizza.CONFIG_ANALOG" />
+
+                <category android:name="com.google.android.wearable.watchface.category.WEARABLE_CONFIGURATION" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name=".ui.faces.material.MaterialWatchFace"
+            android:allowEmbedded="true"
+            android:label="@string/material_name"
+            android:permission="android.permission.BIND_WALLPAPER"
+            android:taskAffinity="" >
+            <meta-data
+                android:name="android.service.wallpaper"
+                android:resource="@xml/watch_face" />
+            <meta-data
+                android:name="com.google.android.wearable.watchface.preview"
+                android:resource="@drawable/preview_material" />
+            <meta-data
+                android:name="com.google.android.clockwork.home.preview_circular"
+                android:resource="@drawable/preview_material_circular" />
+
+            <!-- companion configuration activity -->
+            <meta-data
+                android:name="com.google.android.wearable.watchface.companionConfigurationAction"
+                android:value="com.boost.watchcore.material.CONFIG_ANALOG" />
+
+            <!-- wearable configuration activity -->
+            <meta-data
+                android:name="com.google.android.wearable.watchface.wearableConfigurationAction"
+                android:value="com.boost.watchcore.material.CONFIG_ANALOG" />
+
+            <intent-filter>
+                <action android:name="android.service.wallpaper.WallpaperService" />
+
+                <category android:name="com.google.android.wearable.watchface.category.WATCH_FACE" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".ui.faces.heartbeat.HeartWatchFace"
+            android:allowEmbedded="true"
+            android:label="@string/temp_real_heart"
+            android:permission="android.permission.BIND_WALLPAPER"
+            android:taskAffinity="" >
+            <meta-data
+                android:name="android.service.wallpaper"
+                android:resource="@xml/watch_face" />
+            <meta-data
+                android:name="com.google.android.wearable.watchface.preview"
+                android:resource="@drawable/heart_0" />
+
+            <!-- wearable configuration activity -->
+            <meta-data
+                android:name="com.google.android.wearable.watchface.wearableConfigurationAction"
+                android:value="com.boost.watchcore.heartbeat.CONFIG_ANALOG" />
+            <intent-filter>
+                <action android:name="android.service.wallpaper.WallpaperService" />
+
+                <category android:name="com.google.android.wearable.watchface.category.WATCH_FACE" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".ui.faces.simple.SimpleWatchFace"
+            android:allowEmbedded="true"
+            android:label="@string/simple_name"
+            android:permission="android.permission.BIND_WALLPAPER"
+            android:taskAffinity="" >
+            <meta-data
+                android:name="android.service.wallpaper"
+                android:resource="@xml/watch_face" />
+            <meta-data
+                android:name="com.google.android.wearable.watchface.preview"
+                android:resource="@drawable/preview_simple" />
+            <!-- wearable configuration activity -->
+            <meta-data
+                android:name="com.google.android.wearable.watchface.wearableConfigurationAction"
+                android:value="com.boost.watchcore.simple.CONFIG_ANALOG" />
+
+            <intent-filter>
+                <action android:name="android.service.wallpaper.WallpaperService" />
+                <category android:name="com.google.android.wearable.watchface.category.WATCH_FACE" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".ui.faces.pizza.PizzaWatchFace"
+            android:allowEmbedded="true"
+            android:label="@string/pizza_name"
+            android:permission="android.permission.BIND_WALLPAPER"
+            android:taskAffinity="" >
+            <meta-data
+                android:name="android.service.wallpaper"
+                android:resource="@xml/watch_face" />
+            <meta-data
+                android:name="com.google.android.wearable.watchface.preview"
+                android:resource="@drawable/preview_pizza" />
+            <!-- wearable configuration activity -->
+            <meta-data
+                android:name="com.google.android.wearable.watchface.wearableConfigurationAction"
+                android:value="com.boost.watchcore.pizza.CONFIG_ANALOG" />
+
+            <intent-filter>
+                <action android:name="android.service.wallpaper.WallpaperService" />
+                <category android:name="com.google.android.wearable.watchface.category.WATCH_FACE" />
+            </intent-filter>
+        </service>
+        <service android:name=".WatchFaceConfigListenerService">
+            <intent-filter>
+                <action android:name="com.google.android.gms.wearable.BIND_LISTENER" />
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+    </application>
+
+</manifest>

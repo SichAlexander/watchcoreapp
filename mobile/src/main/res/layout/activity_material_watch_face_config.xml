@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar_activity_material_watch_face_config"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/action_bar_bg"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+        <RelativeLayout style="@style/SettingsItem">
+
+            <TextView
+                style="@style/SettingsItemTitle"
+                android:text="@string/material_config_background_style" />
+
+            <CheckBox
+                android:id="@+id/italic_CheckBox_MaterialConfigCompanion"
+                style="@style/SettingsItemCheckbox" />
+        </RelativeLayout>
+
+        <RelativeLayout style="@style/SettingsItem">
+
+            <TextView
+                style="@style/SettingsItemTitle"
+                android:text="@string/material_config_date" />
+
+            <CheckBox
+                android:id="@+id/date_CheckBox_MaterialConfigCompanion"
+                style="@style/SettingsItemCheckbox" />
+        </RelativeLayout>
+
+        <RelativeLayout style="@style/SettingsItem">
+
+            <TextView
+                style="@style/SettingsItemTitle"
+                android:text="@string/material_config_hour" />
+
+            <CheckBox
+                android:id="@+id/hour_CheckBox_MaterialConfigCompanion"
+                style="@style/SettingsItemCheckbox" />
+        </RelativeLayout>
+
+        <RelativeLayout style="@style/SettingsItem">
+
+            <TextView
+                style="@style/SettingsItemTitle"
+                android:text="@string/material_config_shadow" />
+
+            <CheckBox
+                android:id="@+id/shadow_CheckBox_MaterialConfigCompanion"
+                style="@style/SettingsItemCheckbox" />
+        </RelativeLayout>
+
+        <RelativeLayout style="@style/SettingsItem">
+
+            <TextView
+                style="@style/SettingsItemTitle"
+                android:text="@string/material_config_roman" />
+
+            <CheckBox
+                android:id="@+id/roman_CheckBox_MaterialConfigCompanion"
+                style="@style/SettingsItemCheckbox" />
+        </RelativeLayout>
+
+        <RelativeLayout style="@style/SettingsItem">
+
+            <TextView
+                style="@style/SettingsItemTitle"
+                android:text="@string/material_config_night_mode" />
+
+            <CheckBox
+                android:id="@+id/nightMode_CheckBox_MaterialConfigCompanion"
+                style="@style/SettingsItemCheckbox" />
+        </RelativeLayout>
+    </LinearLayout>
+</ScrollView>

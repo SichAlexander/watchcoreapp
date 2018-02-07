@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="material_green">#009688</color>
+    <color name="action_bar_bg">#FF3C3F41</color>
+    <color name="dark_bg">#FF3C3F41</color>
+    <color name="color_accent">#c4c4c4</color>
+    <color name="action_bar_bg_darker">#26292b</color>
+    <!--<color name="dialog_text_color">#26292b</color>-->
+    <color name="dialog_text_color">#009688</color>
+    <color name="bg_about_black_70">#B3000000</color>
+    <color name="dialog_bg">#FFF9F9F9</color>
+    <color name="dialog_title_text_color">#FF373737</color>
+    <color name="dialog_main_text_color">#009688</color>
+</resources>

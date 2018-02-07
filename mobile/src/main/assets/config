@@ -1,0 +1,3 @@
+// Commands for terminal to connect handheld  device and wear emulator
+adb devices
+adb -d forward tcp:5601 tcp:5601

@@ -1,0 +1,5 @@
+<resources>
+    <string-array name="android_wear_capabilities">
+        <item>boost_watch_faces</item>
+    </string-array>
+</resources>

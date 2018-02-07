@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/about_ImageView_ItemViewPager"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/topBlack"
+        android:layout_above="@id/about_ImageView_ItemViewPager"
+        android:background="@color/bg_about_black_70" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/bottomBlack"
+        android:layout_below="@id/about_ImageView_ItemViewPager"
+        android:background="@color/bg_about_black_70" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottomBlack"
+        android:layout_below="@id/topBlack"
+        android:layout_toRightOf="@id/about_ImageView_ItemViewPager"
+        android:background="@color/bg_about_black_70" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottomBlack"
+        android:layout_below="@id/topBlack"
+        android:layout_toLeftOf="@id/about_ImageView_ItemViewPager"
+        android:background="@color/bg_about_black_70" />
+
+    <TextView
+        android:id="@+id/description_TextView_ItemViewpager"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/about_ImageView_ItemViewPager"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/description_text_top_margin"
+        android:textAllCaps="true"
+        android:gravity="center"
+        android:textAppearance="@android:style/TextAppearance.Large"
+        android:textColor="@android:color/white" />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/next_ImageView_ItemViewPager"
+        android:src="@drawable/ic_cursor"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"/>
+
+</RelativeLayout>

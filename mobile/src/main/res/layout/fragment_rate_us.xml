@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:background="@drawable/bg_dialog">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:text="@string/rating_title"
+        android:textAppearance="@android:style/TextAppearance.Medium"
+        android:textColor="@color/dialog_title_text_color" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dialog_button_top_margin"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/awesome_TextView_VoteDialog"
+            style="@style/DialogButtonsStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/ic_awesome"
+            android:text="@string/rating_awesome" />
+
+        <TextView
+            android:id="@+id/normal_TextView_VoteDialog"
+            style="@style/DialogButtonsStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/ic_normal"
+            android:text="@string/rating_normal" />
+
+        <TextView
+            android:id="@+id/bad_TextView_VoteDialog"
+            style="@style/DialogButtonsStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/ic_bad"
+            android:text="@string/rating_bad" />
+
+    </LinearLayout>
+</LinearLayout>
